@@ -14,8 +14,8 @@ export class Socioi implements INodeType {
 		displayName: 'Socioi',
 		name: 'socioi',
 		icon: {
-			light: 'file:socioi.svg',
-			dark: 'file:socioi.dark.svg',
+			light: 'file:socioi.png',
+			dark: 'file:socioi.dark.png',
 		},
 		group: ['output'],
 		version: 1,

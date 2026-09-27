@@ -13,8 +13,8 @@ export class SocioiApi implements ICredentialType {
 	documentationUrl = 'https://socioi.com/docs/public-api/authentication';
 
 	icon = {
-		light: 'file:socioi.svg',
-		dark: 'file:socioi.dark.svg',
+		light: 'file:socioi.png',
+		dark: 'file:socioi.dark.png',
 	} as const;
 
 	properties: INodeProperties[] = [

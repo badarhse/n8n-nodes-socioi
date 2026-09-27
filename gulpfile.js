@@ -10,7 +10,7 @@ async function copyIcons() {
 	await mkdir(nodeDest, { recursive: true });
 	await mkdir(credDest, { recursive: true });
 
-	const icons = ['socioi.svg', 'socioi.dark.svg'];
+	const icons = ['socioi.png', 'socioi.dark.png'];
 	for (const icon of icons) {
 		const src = path.join('nodes', 'Socioi', icon);
 		await copyFile(src, path.join(nodeDest, icon));
