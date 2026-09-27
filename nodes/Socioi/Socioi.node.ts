@@ -4,16 +4,19 @@ import type {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	JsonObject,
 } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
+import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
 import { socioiApiRequest } from './GenericFunctions';
 
 export class Socioi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Socioi',
 		name: 'socioi',
-		// eslint-disable-next-line n8n-nodes-base/node-class-description-icon-not-svg
-		icon: 'file:socioi.png',
+		icon: {
+			light: 'file:socioi.svg',
+			dark: 'file:socioi.dark.svg',
+		},
 		group: ['output'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
@@ -21,8 +24,9 @@ export class Socioi implements INodeType {
 		defaults: {
 			name: 'Socioi',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		usableAsTool: true,
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'socioiApi',
@@ -394,7 +398,10 @@ export class Socioi implements INodeType {
 					returnData.push(...executionErrorData);
 					continue;
 				}
-				throw error;
+				if (error instanceof NodeOperationError || error instanceof NodeApiError) {
+					throw error;
+				}
+				throw new NodeApiError(this.getNode(), error as JsonObject);
 			}
 		}
 

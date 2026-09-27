@@ -12,6 +12,11 @@ export class SocioiApi implements ICredentialType {
 
 	documentationUrl = 'https://socioi.com/docs/public-api/authentication';
 
+	icon = {
+		light: 'file:socioi.svg',
+		dark: 'file:socioi.dark.svg',
+	} as const;
+
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
