@@ -1,0 +1,10 @@
+.idea
+node_modules
+.DS_Store
+.tmp
+tmp
+dist
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+.vscode/launch.json
