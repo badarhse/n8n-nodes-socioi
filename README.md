@@ -64,6 +64,14 @@ npm run build
 npm run lint
 ```
 
+## Publishing (maintainers)
+
+Releases must be published from GitHub Actions with npm **provenance** (required by the n8n Creator Portal).
+
+1. One-time: on npm package settings, add a **Trusted Publisher** for GitHub Actions (`badarhse` / `n8n-nodes-socioi` / workflow `publish.yml`).
+2. Bump version, commit, tag, and push — e.g. `git tag 0.1.1 && git push origin 0.1.1`
+3. The [Publish](.github/workflows/publish.yml) workflow runs `npm publish --access public --provenance`
+
 ## License
 
 [MIT](./LICENSE.md)
