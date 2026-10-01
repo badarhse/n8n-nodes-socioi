@@ -52,6 +52,7 @@ Credential test calls `GET /public/v1/is-connected`.
 
 ## Docs
 
+- [Socioi n8n guide](https://socioi.com/docs/n8n) — install, credentials, workflows, operations
 - [Public API introduction](https://socioi.com/docs/public-api/introduction)
 - [Authentication](https://socioi.com/docs/public-api/authentication)
 - [Posts](https://socioi.com/docs/public-api/posts)

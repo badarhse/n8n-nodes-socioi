@@ -2,16 +2,16 @@
 	"node": "n8n-nodes-socioi.socioi",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["Marketing", "Communication"],
+	"categories": ["Marketing & Content", "Communication"],
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "https://socioi.com/docs/public-api/authentication"
+				"url": "https://socioi.com/docs/n8n/credentials"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": "https://socioi.com/docs/public-api/introduction"
+				"url": "https://socioi.com/docs/n8n"
 			}
 		]
 	}

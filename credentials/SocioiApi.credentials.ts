@@ -10,7 +10,7 @@ export class SocioiApi implements ICredentialType {
 
 	displayName = 'Socioi API';
 
-	documentationUrl = 'https://socioi.com/docs/public-api/authentication';
+	documentationUrl = 'https://socioi.com/docs/n8n/credentials';
 
 	icon = {
 		light: 'file:socioi.png',
